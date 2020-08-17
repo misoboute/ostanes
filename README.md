@@ -1,0 +1,1 @@
+Ostanes Steadfast Tool Addressing Needs to Evoke Software is, in simple terms, a glorified package manager which can be seem as a cross platform PORT that works on Windows, Linux, macOS... pick your poison!
