@@ -1,0 +1,10 @@
+{
+    "index": [
+        {
+            "name": "boost",
+            "version-lowest": "1.74",
+            "version-highest": "1.74",
+            "rituals": [ "boost-1.74.json" ]
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "name": "boost",
+    "aliases": [],
+    "revision": 1,
+    "version-lowest": "1.74",
+    "version-highest": "1.74",
+    "parameters": [
+        {
+            "someVersion": {
+                "type": "version",
+                "lowest": "1.70",
+                "highest": "1.78",
+                "default": "1.74"
+            },
+            "somePath": {
+                "type": "path",
+                "default": "${vessel}/some-other-spirit/3.14"
+            },
+            "someInteger": {
+                "type": "integer",
+                "highest": 52,
+                "lowest": 32,
+                "default": 42
+            }
+        }
+    ],
+    "superiors": [
+        {
+            "name": "ipc"
+        }
+    ],
+    "abodes": [
+        {
+            "condition": "ostanes.hostOs = windows",
+            "url": "https://dl.bintray.com/boostorg/release/1.74.0/source/boost_1_74_0.7z"
+        },
+        {
+            "condition": "ostanes.hostOs != windows",
+            "url": "https://dl.bintray.com/boostorg/release/1.74.0/source/boost_1_74_0.tar.gz"
+        }
+    ]
+}
