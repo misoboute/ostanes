@@ -16,6 +16,7 @@ Ostanes Steadfast Tool Addressing Needs to Evoke Software is in simple terms a g
 - *charm*: a query that identifies a subset of the spirits governed by a ritual (e.g. { "name": "boost", version: "1.74" })
 
 # Features
+## Desired
 - Command line interface features commands to summon, banish, or locate a spirit using inline or infile charms.
 - CLI can be used to configure ostanes grimoires (add/remove, enable/disable) and vessels (add/remove, select)
 - Rituals can be defined to provide parameters, then, based on the values assigned to those parmeters at the time of performing the ritual, they prescribe such things as charms for superior spirits, abode(s), and commands to patch files, configure build tree, build the software, install, etc. Some of these are optional.
@@ -28,3 +29,7 @@ Ostanes Steadfast Tool Addressing Needs to Evoke Software is in simple terms a g
 - By default, if no spirit is set as default for 
 - Summoning spirits by name (without version) assumes the latest version.
 - Rituals or indexes are not cached locally as accessing the remote grimoire is fast enough given a reliable connection. Grimoire indexes are broken down to small enough chunks based on the initial letters of the package names they contain. When summoning a spirit, if not found in the vessel, only the required piece of the remote index is downloaded.
+- Rituals have access to the class `RitualUtil` that provides utilities for downloading, extracting, patching, and other common activities needed when building/installing software.
+- When `RitualUtil` fails to download from a certain abode, sends an email to the ritual maintainer (address must be set in the ritual).
+
+## Implemented
